@@ -1,0 +1,4 @@
+﻿  001.cpp
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\001\001.cpp(11,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\001\001.cpp(11,36): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  001.vcxproj -> C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\001\x64\Debug\001.exe
