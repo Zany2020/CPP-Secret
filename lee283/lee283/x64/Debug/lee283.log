@@ -1,0 +1,3 @@
+﻿  006.cpp
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee283\006.cpp(77,20): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  lee283.vcxproj -> C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee283\x64\Debug\lee283.exe

@@ -1,0 +1,3 @@
+﻿  lee459.cpp
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\2026.3.16\lee459.cpp(32,9): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  2026.3.16.vcxproj -> C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\2026.3.16\x64\Debug\2026.3.16.exe
