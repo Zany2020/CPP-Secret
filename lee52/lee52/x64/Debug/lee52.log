@@ -1,0 +1,4 @@
+﻿  lee54.cpp
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee52\lee54.cpp(10,12): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee52\lee54.cpp(11,12): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee52\lee54.cpp(16,5): error C2143: 语法错误: 缺少“;”(在“}”的前面)
