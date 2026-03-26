@@ -1,0 +1,4 @@
+﻿  lee67.cpp
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee67\lee67.cpp(36,15): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee67\lee67.cpp(37,15): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  lee67.vcxproj -> C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee67\x64\Debug\lee67.exe
