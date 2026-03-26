@@ -1,0 +1,4 @@
+﻿  lee1232.cpp
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee1232\lee1232.cpp(12,14): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee1232\lee1232.cpp(13,14): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  lee1232.vcxproj -> C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee1232\x64\Debug\lee1232.exe
