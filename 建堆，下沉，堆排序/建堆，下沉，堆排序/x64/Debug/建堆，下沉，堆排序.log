@@ -1,0 +1,4 @@
+﻿  (￣、￣).cpp
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\建堆，下沉，堆排序\(￣、￣).cpp(35,8): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\建堆，下沉，堆排序\(￣、￣).cpp(45,8): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  建堆，下沉，堆排序.vcxproj -> C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\建堆，下沉，堆排序\x64\Debug\建堆，下沉，堆排序.exe
