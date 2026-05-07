@@ -24,12 +24,18 @@
     <ClCompile Include="CScreen.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CPerson.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMobilePhone.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="CScreen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CPerson.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

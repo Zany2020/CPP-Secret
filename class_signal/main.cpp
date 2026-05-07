@@ -1,52 +1,63 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include"CMobilePhone.h"
-#include "CScreen.h"
+#include"CScreen.h"
+#include "CMobilePhone.h"
+#include "CPerson.h"
+using namespace std;
+//参考的main函数，可以根据自己的情况修改
+int main() {
+    // 创建一个手机对象，带完整参数（包含屏幕参数），打印，
+    CMobilePhone phoneA
+    (
+        "小米手机A",            // 手机名
+        "Xiaomi 14",              // 型号
+        15.26,                         // 长
+        7.13,                           // 宽
+        0.82,                           // 厚
+        "张三",                       // 使用人s
+        "13800138000",       // 手机号
+        6.36,                           // 屏幕尺寸
+        "2670x1200",            // 分辨率
+        "AMOLED",               // 技术类型
+        "三星",                      // 厂家
+        "Xiaomi 14"              // 适配型号
+    );
 
-// 在main中，通过构造函数创建手机对象
+    CPerson xiaoqiang("王小强", 18, true, &phoneA);// 创建一个人对象，拥有手机A
+    CPerson uncle("王叔叔", 45, true, NULL);
 
-    // TODO: 利用构造函数A创建一个实体对象、一个指针对象
+    xiaoqiang.whoareyou();
+    uncle.whoareyou();
 
-    // TODO: 利用无参构造函数B创建一个实体对象、一个指针对象
+    cout << endl;
+    xiaoqiang.callsomeone(&uncle);
 
-    // TODO: 调用showinfo、showsize分别输出四部手机的属性。
+    cout << endl;
+    cout << "王小强把手机A送给了王叔叔。" << endl;
+    uncle.setPhone(xiaoqiang.getPhone());
+    xiaoqiang.setPhone(NULL);
+    phoneA.setUser("王叔叔");
 
-    // TODO: 用delete 销毁两个指针对象。
+    CMobilePhone phoneB(
+        "华为手机B",
+        "Huawei Pura80",
+        16.35,
+        7.48,
+        0.82,
+        "王小强",
+        "13900139000",
+        6.7,
+        "3200*1440",
+        "OLED",
+        "京东方",
+        "Huawei Pura80"
+    );
 
-int main()
-{
-    CMobilePhone p1("iPhone", "17 ", "Akane", "1145114", 149.6, 71.5, 8.75);
-    CMobilePhone* ptr1 = new CMobilePhone();
+    cout << endl;
+    cout << "王小强获得了一部新手机B。" << endl;
+    xiaoqiang.setPhone(&phoneB);
 
-    CMobilePhone p2;
-    CMobilePhone* ptr2 = new CMobilePhone();
-
-   // p1.show();
-
-	ptr1->setname("iPhone");
-	ptr1->setuser("Kana");
-	ptr1->setnumber("114514");
-	ptr1->show();
-
-
-	//p2.show();
-	
-	p2.setname("iPhone");
-	p2.setuser("Ruby");
-	p2.setnumber("114516"); 
-	p2.show();
-
-	ptr2->setname("iPhone");
-	ptr2->setuser("Aqua");
-	ptr2->setnumber("114515");
-	ptr2->show();
-
-
-	CScreen s1(6, 1080, 1, "Apple");
-	s1.showScreenInfo(6, 1080, 1, "Apple");
-	s1.isCompatibleWithPhone(p1);
-
-    delete ptr1;    
-    delete ptr2;
+    cout << endl;
+    xiaoqiang.callsomeone(&uncle);
+    uncle.callsomeone(&xiaoqiang);
 
     return 0;
 }

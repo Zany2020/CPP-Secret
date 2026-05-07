@@ -123,12 +123,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CPerson.cpp" />
     <ClCompile Include="CScreen.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="CMobilePhone.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMobilePhone.h" />
+    <ClInclude Include="CPerson.h" />
     <ClInclude Include="CScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
