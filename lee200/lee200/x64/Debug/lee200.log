@@ -1,0 +1,6 @@
+﻿  lee200.cpp
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee200\lee200.cpp(11,10): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee200\lee200.cpp(12,10): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee200\lee200.cpp(28,10): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee200\lee200.cpp(30,10): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  lee200.vcxproj -> C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee200\x64\Debug\lee200.exe
