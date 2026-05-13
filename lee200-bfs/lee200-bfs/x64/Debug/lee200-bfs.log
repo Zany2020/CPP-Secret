@@ -1,0 +1,4 @@
+﻿  2026.5.13.cpp
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee200-bfs\2026.5.13.cpp(46,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee200-bfs\2026.5.13.cpp(48,16): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  lee200-bfs.vcxproj -> C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee200-bfs\x64\Debug\lee200-bfs.exe
