@@ -1,0 +1,5 @@
+﻿  lee994.cpp
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee994-bfs\lee994.cpp(11,10): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee994-bfs\lee994.cpp(12,10): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee994-bfs\lee994.cpp(35,13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  lee994-bfs.vcxproj -> C:\Users\Masahiro\OneDrive\Desktop\Work\cpp\lee994-bfs\x64\Debug\lee994-bfs.exe
