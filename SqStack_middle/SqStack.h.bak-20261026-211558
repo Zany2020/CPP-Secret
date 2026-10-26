@@ -1,0 +1,212 @@
+#pragma once
+#include<iostream>
+
+constexpr auto OK = 1;
+constexpr auto ERROR = 0;
+constexpr auto STACK_OVERFLOW = -1;
+//constexpr auto TRUE = 1;
+//constexpr auto FALSE = 0;
+
+constexpr auto INIT_STACK_SIZE = 100;
+constexpr auto STAKE_INCREMENT = 10;
+
+//typedef 给类型起别名
+typedef int Status;  //函数返回类型状态
+
+int getIsp(char op)
+{
+    switch (op)
+    {
+    case'#': return 0;
+    case'(': return 1;
+    case'+':
+    case'-': return 2;
+    case'*':
+    case'/': return 4;
+    case')': return 6;
+    default:return -1;
+    }
+}
+
+int getIcp(char op)
+{
+    switch (op)
+    {
+    case'#': return 0;
+    case'(': return 6;
+    case'+':
+    case'-': return 2;
+    case'*':
+    case'/': return 4;
+    case')': return 1;
+    default:return -1;
+    }
+}
+template<typename T>
+// 模板顺序栈：T可以是任意类型，这里我们用int和char
+class SqStack
+{
+private:
+	T* base;//栈底指针
+	    int top; //栈顶指针
+	int stacksize; // 栈大小
+
+public:
+	SqStack();
+	~SqStack();
+
+	Status InitStack(); //初始化
+	Status StackEmpty() const;//判断是否为空
+	Status StackFull() const;//判断是否为满
+	Status Push(T e);// 元素入栈
+	Status Pop(T* e);// 栈顶元素出栈，e带回结果
+	Status GetTop(T* e) const;
+	void Traverse() const;// 遍历栈（栈底→栈顶输出）
+	void ClearStack(); // 清空栈（保留内存）
+	void DestroyStack(); // 销毁栈（释放内存）
+
+
+};
+
+
+
+//void conversion(int dec, int base);
+////Status evaluatePostfix(const char* expr, int* result);
+//
+//void InfixToPostfix(const char* infix, char* postfix);
+//
+//void EvaluateInfix(const char* infix, int* result);
+template<typename T>
+SqStack<T>::SqStack()
+{
+    base = NULL;
+    top = 0;
+    stacksize = 0;
+}
+
+// 析构函数
+template<typename T>
+SqStack<T>::~SqStack()
+{
+    DestroyStack();
+}
+
+// 初始化栈
+template<typename T>
+Status SqStack<T>::InitStack()
+{
+    if (base != NULL)
+    {
+        DestroyStack();
+    }
+    base = new T[INIT_STACK_SIZE];
+    if (!base)
+    {
+        exit(STACK_OVERFLOW);
+    }
+    top = 0;
+    stacksize = INIT_STACK_SIZE;
+    return OK;
+}
+
+// 判断栈空
+template<typename T>
+Status SqStack<T>::StackEmpty() const
+{
+    return top == 0 ? 1 : 0;
+}
+
+// 判断栈满
+template<typename T>
+Status SqStack<T>::StackFull() const
+{
+    return top == stacksize ? 1 : 0;
+}
+
+// 元素入栈（满则自动扩容）
+template<typename T>
+Status SqStack<T>::Push(T e)
+{
+    if (StackFull())
+    {
+        int newSize = stacksize + STAKE_INCREMENT;
+        T* newBase = new T[newSize];
+        if (!newBase)
+        {
+            exit(STACK_OVERFLOW);
+        }
+        for (int i = 0; i < top; ++i)
+        {
+            newBase[i] = base[i];
+        }
+        delete[] base;
+        base = newBase;
+        stacksize = newSize;
+    }
+    base[top] = e;
+    top++;
+    return OK;
+}
+
+// 栈顶元素出栈
+template<typename T>
+Status SqStack<T>::Pop(T* e)
+{
+    if (StackEmpty())
+    {
+        return ERROR;
+    }
+    top--;
+    *e = base[top];
+    return OK;
+}
+
+// 取栈顶元素
+template<typename T>
+Status SqStack<T>::GetTop(T* e) const
+{
+    if (StackEmpty())
+    {
+        return ERROR;
+    }
+    *e = base[top - 1];
+    return OK;
+}
+
+// 遍历输出栈
+template<typename T>
+void SqStack<T>::Traverse() const
+{
+    if (StackEmpty()) {
+        std::cout << "栈为空，无元素可遍历" << std::endl;
+        return;
+    }
+    std::cout << "栈中元素（栈底 -> 栈顶）：";
+    for (int i = 0; i < top; i++) {
+        std::cout << base[i] << " ";
+    }
+    std::cout << std::endl;
+}
+
+// 清空栈
+template<typename T>
+void SqStack<T>::ClearStack()
+{
+    top = 0;
+}
+
+// 销毁栈
+template<typename T>
+void SqStack<T>::DestroyStack()
+{
+    if (base != NULL)
+    {
+        delete[] base;
+        base = NULL;
+    }
+    top = 0;
+    stacksize = 0;
+}
+int getIsp(char op);
+int getIcp(char op);
+Status calculateInfix(const char* infix, int* result);
